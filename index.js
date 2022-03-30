@@ -5,7 +5,7 @@ let colorElement = document.querySelector('.color')
 
 
 axios
-    .get("http://api-tutor.herokuapp.com/v1/colors")
+    .get("https://api-tutor.herokuapp.com/v1/colors")
     .then(function (res) {
         res.data.forEach(color => {
 
@@ -20,7 +20,7 @@ axios
     })
 
 axios
-    .get("http://api-tutor.herokuapp.com/v1/makes")
+    .get("https://api-tutor.herokuapp.com/v1/makes")
     .then(function (res) {
         res.data.forEach(make => {
 
@@ -33,13 +33,13 @@ axios
     })
 
 axios
-    .get("http://api-tutor.herokuapp.com/v1/cars")
+    .get("https://api-tutor.herokuapp.com/v1/cars")
     .then(function (res) {
         res.data.forEach(model => {
 
-            console.log(res.data);
+            console.log(model);
             const li = document.createElement('li')
-            li.innerHTML = `<li>${data.model}</li>`
+            li.innerHTML = `<li>${model.make}</li>`
             carsElement.appendChild(li)
         });
 
