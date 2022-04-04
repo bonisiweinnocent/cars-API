@@ -1,0 +1,31 @@
+body{
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: auto;
+    padding: 40px;
+  }
+  
+  .container{
+    align-items: center;
+    text-align: center;
+    background-color: plum;
+    padding: 40px;
+    
+  }
+  .yellow{
+    color: yellow;
+  }
+ 
+.display{
+  align-items: center;
+  text-align: center;
+}
+.red{
+  color: crimson;
+}
+a{
+  display: flex;
+  justify-content: end;
+}
+ 
+  
