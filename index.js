@@ -32,7 +32,7 @@ axios
     .get("https://api-tutor.herokuapp.com/v1/cars")
     .then(function (res) {
         res.data.forEach((model) => {
-            
+
             const li = document.createElement('tr')
             li.innerHTML = `<tr><td>${model.make}</td><td> ${model.model}</td>  <td> ${model.color}</td>   <td> R${model.price}</td><td> ${model.reg_number}</td><tr>`
             carsElement.appendChild(li)
@@ -59,31 +59,29 @@ enterElem.addEventListener('click', function () {
 
 
                 if (brandsElem.value == car.make && coloursElem.value == car.color) {
-                   
 
                     const list = document.createElement('tr')
-                    list.innerHTML = `<tr><td>${car.model}</td></tr>`
-
-                    displayElem.appendChild(list)
+                    list.innerHTML = `<tr><td>${car.make}</td><td> ${car.model}</td>  <td> ${car.color}</td>   <td> R${car.price}</td><td> ${car.reg_number}</td><tr>`
                 } else if (brandsElem.value == car.make) {
                     const list = document.createElement('tr')
-                    list.innerHTML = `<tr><td>${car.model}</td></tr>`
+                    list.innerHTML = `<tr><td>${car.make}</td><td> ${car.model}</td>  <td> ${car.color}</td>   <td> R${car.price}</td><td> ${car.reg_number}</td><tr>`
 
                     displayElem.appendChild(list)
                 } else if (coloursElem.value == car.color) {
                     const list = document.createElement('tr')
-                    list.innerHTML = `<tr><td>${car.model}</td></tr>`
+                    list.innerHTML = `<tr><td>${car.make}</td><td> ${car.model}</td>  <td> ${car.color}</td>   <td> R${car.price}</td><td> ${car.reg_number}</td><tr>`
 
                     displayElem.appendChild(list)
-                }else if(!brandsElem.value && !coloursElem.value ){
+                } else if (!brandsElem.value && !coloursElem.value) {
                     emptyElem.innerHTML = 'Please make a selection!'
+
                 }
 
             });
             setTimeout(function () {
-              emptyElem.innerHTML = '';
-                
-        
+                emptyElem.innerHTML = '';
+
+
             }, 2000);
 
         })
